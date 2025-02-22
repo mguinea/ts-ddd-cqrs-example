@@ -15,14 +15,14 @@ services:
       context: ./../../
       dockerfile: ./etc/docker/Dockerfile
     container_name: ts-example.app
-    # environment:
-    #   - PORT=${PORT}
     ports:
       - '3111:3000' # external:internal
     depends_on:
       - db
     volumes:
-      - ./../../src:/app/src
+      - ./../../:/src  # Mount everything
+      - /src/node_modules  # Keep node_modules inside the container
+    command: npm run start:dev  # Override default CMD in Dockerfile
 
   pgadmin:
     image: dpage/pgadmin4
