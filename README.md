@@ -29,7 +29,7 @@
 ## Project setup
 
 ```bash
-$ npm install
+$ docker compose up
 ```
 
 ## Compile and run the project
@@ -97,3 +97,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## References
+
+- [Docker compose setup](https://dev.to/chukwutosin_/step-by-step-guide-setting-up-a-nestjs-application-with-docker-and-postgresql-5hei)
